@@ -9,7 +9,7 @@ A Form as dialog will appear, fill the form accordnly.
 
 To remove an entry simpley click on the red button with the trash can icon present on every line.
 
-![Screenshot](https://github.com/assiomatica/bookmarks/screenshot.jpeg)
+![Screenshot](https://github.com/assiomatica/bookmarks/blob/master/screenshot.jpeg?raw=true)
 
 ## Development server
 
