@@ -1,0 +1,55 @@
+<div class="app-content">
+
+    <div *ngIf="bookmarkError?.message">
+        <div class="alert alert-danger" role="alert">
+            Some error occurred. Please try again
+        </div>
+    </div>
+
+    <mat-card>
+        <mat-card-content>
+            <mat-list class="app-list" *ngFor="let grp of BookmarkList | groupBy:'Group'">
+                <h3>{{grp.key}}</h3>
+                <mat-list-item *ngFor="let bookmark of grp.value">
+                    <button mat-mini-fab color="warn" (click)="deleteBookmark(bookmark.Id)">
+                        <mat-icon aria-label="delete a bookmark">delete</mat-icon>
+                    </button>
+                    <h3 mat-line>{{bookmark.Name}}</h3>
+                    <p mat-line class="demo-secondary-text">{{bookmark.Url}}</p>
+                </mat-list-item>
+            </mat-list>
+
+        </mat-card-content>
+    </mat-card>
+    <button mat-fab class="app-fab" (click)="openDialog()">
+        <mat-icon aria-label="add a bookmark">add</mat-icon>
+    </button>
+</div>
+<!--
+<hr />
+ 
+<div class="container form-group" style="margin: 10px;">
+    <h3>Insert a new Bookmark</h3>
+    <form (ngSubmit)="createBookmark()">
+        <div class="row">
+            <div class="form-group col-md-4">
+                <input [(ngModel)]="Name" placeholder="Enter a name" class="form-control" name="Name"
+                    style="min-width: 150px;" />
+            </div>
+            <div class="form-group col-md-4">
+                <input [(ngModel)]="Url" placeholder="Enter the URL" class="form-control" name="Url"
+                    style="min-width: 150px;" />
+            </div>
+
+
+
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary" style="Width:70px;">
+                    Add
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+-->

@@ -1,0 +1,32 @@
+<mat-toolbar>Bookmarks</mat-toolbar>
+<mat-dialog-content class="mat-typography">
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="content-container tab-content-height">
+        <mat-form-field>
+            <input matInput formControlName="Name" placeholder="Enter Bookmark name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput formControlName="Url" placeholder="Enter Url">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select placeholder="Select the group" formControlName="Group">
+                <mat-option value="option" *ngFor="let group of groups" [value]="group.value">
+                    {{group.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+    </div>
+</form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+        <button mat-raised-button color="primary" type="submit" (click)="submit()"
+            style="margin-left: 20px;">Save
+        </button>
+        <button mat-raised-button color="_primary" (click)="onCloseDialog()">Cancel</button>
+    </mat-dialog-actions>

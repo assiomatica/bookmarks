@@ -1,14 +1,20 @@
 # Bookmarks
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+A simple application to manage a list of bookmarks.
+
+It's created using the Material Design.
+
+To add a bookmark click on the + button in the lower rigth angle of the page.
+A Form as dialog will appear, fill the form accordnly.
+
+To remove an entry simpley click on the red button with the trash can icon present on every line.
+
+![Screenshot](https://github.com/assiomatica/bookmarks/screenshot.jpeg)
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
@@ -22,6 +28,19 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Api interceptor
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+in place of a real api back end an HTTP interceptor is implemented: 
+
+FakeBackendInterceptor
+
+It store the data to the localStorage of the browser.
+
+Before deploy in production please remove it from providers in app.module.ts 
+
+providers: [fakeBackendProvider],
+
+
+
+
+
