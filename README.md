@@ -1,5 +1,9 @@
 # Bookmarks
 
+Author: 
+
+Antonio Casula - antonio.casula@gmail.com - Dec 2019
+
 A simple application to manage a list of bookmarks.
 
 It's created using the Material Design.
